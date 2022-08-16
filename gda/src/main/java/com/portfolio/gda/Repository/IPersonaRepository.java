@@ -2,20 +2,10 @@
 package com.portfolio.gda.Repository;
 
 import com.portfolio.gda.Entity.Persona;
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-
-public interface IPersonaRepository {
-    // traer una lista de personas
-    public List<Persona> getPersona();
-    
-    // Guardar un objeto de tipo Persona
-    public void savePersona(Persona persona);
-    
-    //Eliminar un objeto de tipo Persona lo buscamos por id
-    public void deletePersona(Long id);
-    
-    //Buscar una Persona por id
-    public Persona findPersona(Long id);
+@Repository
+public interface IPersonaRepository extends JpaRepository<Persona,Long> {
     
 }
