@@ -7,7 +7,7 @@ package com.portfolio.gda.Controller;
 import com.portfolio.gda.Dto.dtoEducacion;
 import com.portfolio.gda.Entity.Educacion;
 import com.portfolio.gda.Security.Controller.Mensaje;
-import com.portfolio.gda.Service.Seducacion;
+import com.portfolio.gda.Service.SEducacion;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "http://localhost:4200")
 public class CEducacion {
     @Autowired
-    Seducacion sEducacion;
+    SEducacion sEducacion;
     
     @GetMapping("/lista")
     public ResponseEntity<List<Educacion>> list(){
